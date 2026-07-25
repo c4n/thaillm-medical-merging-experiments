@@ -1,0 +1,38 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Credentials and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Large model, container, and Hugging Face artifacts
+.cache/
+models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.sif
+apptainer/cache/
+apptainer/tmp/
+
+# Scheduler and inference logs
+logs/
+*.out
+results/**/vllm-*.log
+
+# Raw verifier rollouts stay on LANTA or in artifact storage.
+results/**/vf/
+
+# Editor and OS noise
+.DS_Store
+.idea/
+.vscode/
+*~

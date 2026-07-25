@@ -1,0 +1,15 @@
+merge_method: task_arithmetic
+base_model: typhoon-ai/typhoon-s-thaillm-8b-instruct-research-preview
+models:
+  - model: ThaiLLM/ThaiLLM-8B-IQ
+    parameters:
+      weight: 1.0
+  - model: ThaiLLM/ThaiLLM-8B-ToolUse
+    parameters:
+      weight: 0.3
+parameters:
+  normalize: false
+dtype: bfloat16
+tokenizer:
+  source: ThaiLLM/ThaiLLM-8B-IQ
+chat_template: auto

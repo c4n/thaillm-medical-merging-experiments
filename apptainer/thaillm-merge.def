@@ -1,0 +1,42 @@
+Bootstrap: docker
+From: vllm/vllm-openai:v0.8.5.post1
+
+%files
+    environments/med_iq /opt/medical-environments/med_iq
+    environments/med_tooluse /opt/medical-environments/med_tooluse
+
+%post
+    python3 -m pip install --no-cache-dir --upgrade pip
+
+    # mergekit 0.1.4 requires Pydantic 2.10.x.
+    python3 -m venv --system-site-packages /opt/merge-env
+    /opt/merge-env/bin/python -m pip install --no-cache-dir \
+        "mergekit==0.1.4" \
+        "peft==0.18.1"
+
+    # Current medical evaluators require Pydantic 2.11 or newer.
+    python3 -m venv --system-site-packages /opt/eval-env
+    /opt/eval-env/bin/python -m pip install --no-cache-dir \
+        "verifiers==0.1.13.dev8" \
+        "openai>=2.24.0" \
+        "pandas>=2.3.3"
+    /opt/eval-env/bin/python -m pip install --no-cache-dir --no-deps \
+        /opt/medical-environments/med_iq \
+        /opt/medical-environments/med_tooluse
+
+%environment
+    export PYTHONNOUSERSITE=1
+    export TOKENIZERS_PARALLELISM=false
+
+%test
+    python3 -c "import torch; import vllm"
+    /opt/merge-env/bin/python -c "import mergekit, pydantic; assert pydantic.VERSION.startswith('2.10.')"
+    /opt/eval-env/bin/python -c "import med_iq, med_app_env, pydantic; assert tuple(map(int, pydantic.VERSION.split('.')[:2])) >= (2, 11)"
+    /opt/merge-env/bin/mergekit-yaml --help >/dev/null
+    /opt/eval-env/bin/vf-eval --help >/dev/null
+
+%labels
+    Author ThaiLLM
+    Purpose "ThaiLLM IQ and ToolUse merging and evaluation on LANTA"
+    vLLM "0.8.5.post1"
+    mergekit "0.1.4"
