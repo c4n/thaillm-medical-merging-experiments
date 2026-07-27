@@ -57,6 +57,13 @@ concurrent allocation, submit subsets with `sbatch --array=0-1`, then `2-4`.
 judge credential/configuration required by your environment before submitting
 the evaluation; never put the credential in an sbatch file.
 
+## Published-protocol evaluation
+
+The earlier experiments use a bounded, one-rollout comparison. To reproduce
+the public ThaiLLM MedApp protocol with three rollouts, strict IQ JSON scoring,
+unbounded ToolUse generation, and a separate result namespace, follow
+[`docs/official_evaluation_replication.md`](docs/official_evaluation_replication.md).
+
 ## Selection rule
 
 Reject candidates with tool macro-F1 below 97. Among the remaining candidates,

@@ -1,0 +1,73 @@
+{
+  "protocol": {
+    "repository": "vistec-AI/thaillm-medical-post-training",
+    "upstream_commit": "73772633663dfe02eff558a85eacbac9f617d329"
+  },
+  "run": {
+    "name": "baseline_medapp__official_r3",
+    "stage": "tooluse",
+    "model": "/project/lt200394-thllmV/can/fix_tooluse_x/.cache/huggingface/hub/models--ThaiLLM--ThaiLLM-8B-MedApp/snapshots/95e93ca22bf8fdc4d7124872615c1d5df002dfa4",
+    "tokenizer": "/project/lt200394-thllmV/can/fix_tooluse_x/.cache/huggingface/hub/models--ThaiLLM--ThaiLLM-8B-MedApp/snapshots/95e93ca22bf8fdc4d7124872615c1d5df002dfa4",
+    "requested_examples": 5192,
+    "actual_examples": 5122,
+    "rollouts_per_example": 3,
+    "expected_rows": 15366,
+    "slurm_job_id": "6020111"
+  },
+  "runtime": {
+    "image": "/project/lt200394-thllmV/can/fix_tooluse_x/apptainer/thaillm-merge.sif",
+    "python": "3.12.10",
+    "packages": {
+      "datasets": "4.6.1",
+      "openai": "2.46.0",
+      "transformers": "4.51.3",
+      "verifiers": "0.1.13.dev8",
+      "vllm": "0.8.5.post1"
+    }
+  },
+  "datasets": {
+    "ThaiLLM/med-iq": {
+      "expected_splits": {
+        "train": 14208,
+        "test": 200
+      },
+      "actual_splits": {
+        "train": 14208,
+        "test": 200
+      },
+      "fingerprints": {
+        "train": "a10d5bc811bd28d6",
+        "test": "d6a85e819ca4af84"
+      }
+    },
+    "ThaiLLM/med-tool-use": {
+      "expected_splits": {
+        "train": 46117,
+        "test": 5122
+      },
+      "actual_splits": {
+        "train": 46117,
+        "test": 5122
+      },
+      "fingerprints": {
+        "train": "44ca2dcf051f8694",
+        "test": "ea06b7871037896e"
+      }
+    }
+  },
+  "generation_config": {
+    "path": "/project/lt200394-thllmV/can/fix_tooluse_x/configs/eval/medapp_published/generation_config.json",
+    "sha256": "08939a8706eb674f8c21619ca19519356dd2d8d69e078f55703ce294e542417e",
+    "content": {
+      "do_sample": true,
+      "eos_token_id": [
+        151645,
+        151643
+      ],
+      "pad_token_id": 151643,
+      "temperature": 0.4,
+      "transformers_version": "5.5.0",
+      "use_cache": false
+    }
+  }
+}

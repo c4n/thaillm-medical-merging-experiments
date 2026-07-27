@@ -1,0 +1,12 @@
+[project]
+name = "official-med-app-env"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.3.3",
+    "verifiers>=0.1.11.dev0",
+]
+
+[tool.verifiers.eval]
+num_examples = 5
+rollouts_per_example = 3
