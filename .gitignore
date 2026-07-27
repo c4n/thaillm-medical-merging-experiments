@@ -30,6 +30,7 @@ results/**/vllm-*.log
 
 # Raw verifier rollouts stay on LANTA or in artifact storage.
 results/**/vf/
+results/**/iq_judged_official-*.jsonl
 
 # Editor and OS noise
 .DS_Store

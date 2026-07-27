@@ -1,0 +1,12 @@
+{
+  "protocol": "vistec-AI/thaillm-medical-post-training@73772633663dfe02eff558a85eacbac9f617d329",
+  "input": "/project/lt200394-thllmV/can/fix_tooluse_x/results/official_replication_7377263/medapp_tool_linear_t0p3__official_r3/vf/evals/med_iq--medapp_tool_linear_t0p3__official_r3/a7cc4ac2/results.jsonl",
+  "output": "/project/lt200394-thllmV/can/fix_tooluse_x/results/official_replication_7377263/medapp_tool_linear_t0p3__official_r3/iq_judged_official-a7cc4ac2.jsonl",
+  "judge_model": "deepseek/deepseek-v4-flash",
+  "n": 600,
+  "format_reward": 1.0,
+  "citations_reward": 0.6782222222222223,
+  "response_reward": 0.7583333333333333,
+  "combined_reward": 1.5365555555555557,
+  "judge_errors": 0
+}

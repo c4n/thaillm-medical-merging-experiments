@@ -1,0 +1,315 @@
+{
+  "protocol": "vistec-AI/thaillm-medical-post-training@73772633663dfe02eff558a85eacbac9f617d329",
+  "k": 3,
+  "models": {
+    "medapp_tool_linear_t0p3__official_r3": {
+      "input": "/project/lt200394-thllmV/can/fix_tooluse_x/results/official_replication_7377263/medapp_tool_linear_t0p3__official_r3/vf/evals/med_app_env--medapp_tool_linear_t0p3__official_r3/d8bba105/results.jsonl",
+      "n_samples": 5122,
+      "n_rollouts": 15366,
+      "n_errors": 0,
+      "expected_labels": [
+        "create_appointment",
+        "create_reminder",
+        "get_health_emergency_contact",
+        "list_appointment",
+        "list_reminder",
+        "no_tool",
+        "prescreen",
+        "search_medical_facts"
+      ],
+      "all_labels": [
+        "create_appointment",
+        "create_reminder",
+        "get_health_emergency_contact",
+        "list_appointment",
+        "list_reminder",
+        "no_tool",
+        "prescreen",
+        "search_medical_facts"
+      ],
+      "pass@1": {
+        "accuracy": 0.9991539763113367,
+        "trigger": {
+          "P": 1.0,
+          "R": 1.0,
+          "F1": 1.0,
+          "acc": 1.0
+        },
+        "per_class": {
+          "create_appointment": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 300
+          },
+          "create_reminder": {
+            "precision": 1.0,
+            "recall": 0.96,
+            "f1": 0.9795918367346939,
+            "support": 300
+          },
+          "get_health_emergency_contact": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 330
+          },
+          "list_appointment": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 231
+          },
+          "list_reminder": {
+            "precision": 0.9506172839506173,
+            "recall": 1.0,
+            "f1": 0.9746835443037974,
+            "support": 231
+          },
+          "no_tool": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 9552
+          },
+          "prescreen": {
+            "precision": 1.0,
+            "recall": 0.9946236559139785,
+            "f1": 0.9973045822102425,
+            "support": 186
+          },
+          "search_medical_facts": {
+            "precision": 0.9997639839509087,
+            "recall": 1.0,
+            "f1": 0.9998819780479169,
+            "support": 4236
+          }
+        },
+        "macro_f1_expected_labels": 0.9939327426620813,
+        "macro_f1_all_labels": 0.9939327426620813
+      },
+      "pass@3": {
+        "accuracy": 0.9994142912924638,
+        "trigger": {
+          "P": 1.0,
+          "R": 1.0,
+          "F1": 1.0,
+          "acc": 1.0
+        },
+        "per_class": {
+          "create_appointment": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 100
+          },
+          "create_reminder": {
+            "precision": 1.0,
+            "recall": 0.97,
+            "f1": 0.9847715736040609,
+            "support": 100
+          },
+          "get_health_emergency_contact": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 110
+          },
+          "list_appointment": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 77
+          },
+          "list_reminder": {
+            "precision": 0.9390243902439024,
+            "recall": 1.0,
+            "f1": 0.9685534591194969,
+            "support": 77
+          },
+          "no_tool": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3184
+          },
+          "prescreen": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 62
+          },
+          "search_medical_facts": {
+            "precision": 0.9992922859164898,
+            "recall": 1.0,
+            "f1": 0.9996460176991151,
+            "support": 1412
+          }
+        },
+        "macro_f1_expected_labels": 0.9941213813028341,
+        "macro_f1_all_labels": 0.9941213813028341
+      }
+    },
+    "baseline_medapp__official_r3": {
+      "input": "/project/lt200394-thllmV/can/fix_tooluse_x/results/official_replication_7377263/baseline_medapp__official_r3/vf/evals/med_app_env--baseline_medapp__official_r3/9368c299/results.jsonl",
+      "n_samples": 5122,
+      "n_rollouts": 15366,
+      "n_errors": 3,
+      "expected_labels": [
+        "create_appointment",
+        "create_reminder",
+        "get_health_emergency_contact",
+        "list_appointment",
+        "list_reminder",
+        "no_tool",
+        "prescreen",
+        "search_medical_facts"
+      ],
+      "all_labels": [
+        "create_appointment",
+        "create_reminder",
+        "get_health_emergency_contact",
+        "list_appointment",
+        "list_medicine",
+        "list_reminder",
+        "no_tool",
+        "prescreen",
+        "search_medical_facts"
+      ],
+      "pass@1": {
+        "accuracy": 0.9035532994923858,
+        "trigger": {
+          "P": 0.9993378945045244,
+          "R": 0.7788097695218438,
+          "F1": 0.8753987433542773,
+          "acc": 0.9161134973317715
+        },
+        "per_class": {
+          "create_appointment": {
+            "precision": 1.0,
+            "recall": 0.29333333333333333,
+            "f1": 0.45360824742268036,
+            "support": 300
+          },
+          "create_reminder": {
+            "precision": 1.0,
+            "recall": 0.33666666666666667,
+            "f1": 0.5037406483790524,
+            "support": 300
+          },
+          "get_health_emergency_contact": {
+            "precision": 0.9904458598726115,
+            "recall": 0.9424242424242424,
+            "f1": 0.9658385093167702,
+            "support": 330
+          },
+          "list_appointment": {
+            "precision": 0.8379446640316206,
+            "recall": 0.9177489177489178,
+            "f1": 0.8760330578512396,
+            "support": 231
+          },
+          "list_medicine": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "list_reminder": {
+            "precision": 0.6779141104294478,
+            "recall": 0.9567099567099567,
+            "f1": 0.7935368043087971,
+            "support": 231
+          },
+          "no_tool": {
+            "precision": 0.8813105676049838,
+            "recall": 0.9996859296482412,
+            "f1": 0.936773434051111,
+            "support": 9552
+          },
+          "prescreen": {
+            "precision": 0.8971428571428571,
+            "recall": 0.8440860215053764,
+            "f1": 0.8698060941828255,
+            "support": 186
+          },
+          "search_medical_facts": {
+            "precision": 0.9923547400611621,
+            "recall": 0.766052880075543,
+            "f1": 0.8646416200373035,
+            "support": 4236
+          }
+        },
+        "macro_f1_expected_labels": 0.7829973019437224,
+        "macro_f1_all_labels": 0.6959976017277533
+      },
+      "pass@3": {
+        "accuracy": 0.9478719250292854,
+        "trigger": {
+          "P": 0.9994229659549914,
+          "R": 0.8937048503611971,
+          "F1": 0.943612094797058,
+          "acc": 0.9595860991800078
+        },
+        "per_class": {
+          "create_appointment": {
+            "precision": 1.0,
+            "recall": 0.46,
+            "f1": 0.6301369863013699,
+            "support": 100
+          },
+          "create_reminder": {
+            "precision": 1.0,
+            "recall": 0.51,
+            "f1": 0.6754966887417219,
+            "support": 100
+          },
+          "get_health_emergency_contact": {
+            "precision": 0.9907407407407407,
+            "recall": 0.9727272727272728,
+            "f1": 0.981651376146789,
+            "support": 110
+          },
+          "list_appointment": {
+            "precision": 0.7281553398058253,
+            "recall": 0.974025974025974,
+            "f1": 0.8333333333333334,
+            "support": 77
+          },
+          "list_medicine": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "list_reminder": {
+            "precision": 0.5905511811023622,
+            "recall": 0.974025974025974,
+            "f1": 0.7352941176470587,
+            "support": 77
+          },
+          "no_tool": {
+            "precision": 0.8224806201550388,
+            "recall": 0.9996859296482412,
+            "f1": 0.9024666855684719,
+            "support": 3184
+          },
+          "prescreen": {
+            "precision": 0.8548387096774194,
+            "recall": 0.8548387096774194,
+            "f1": 0.8548387096774194,
+            "support": 62
+          },
+          "search_medical_facts": {
+            "precision": 0.9929356357927787,
+            "recall": 0.8958923512747875,
+            "f1": 0.9419210722263589,
+            "support": 1412
+          }
+        },
+        "macro_f1_expected_labels": 0.8193923712053154,
+        "macro_f1_all_labels": 0.7283487744047248
+      }
+    }
+  }
+}

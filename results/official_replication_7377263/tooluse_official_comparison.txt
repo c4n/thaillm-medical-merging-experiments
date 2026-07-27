@@ -1,0 +1,5 @@
+run | rollouts | errors | pass@1 accuracy | pass@1 trigger F1 | pass@1 macro F1 | pass@3 accuracy | pass@3 trigger F1 | pass@3 macro F1
+--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---:
+medapp_tool_linear_t0p3__official_r3 | 15366 | 0 | 99.92% | 100.00% | 99.39% | 99.94% | 100.00% | 99.41%
+baseline_medapp__official_r3 | 15366 | 3 | 90.36% | 87.54% | 78.30% | 94.79% | 94.36% | 81.94%
+Wrote /project/lt200394-thllmV/can/fix_tooluse_x/results/official_replication_7377263/tooluse_official_comparison.json
